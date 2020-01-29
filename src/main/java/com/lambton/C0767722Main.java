@@ -45,11 +45,11 @@ public class C0767722Main {
         System.out.println("Output : " + initResult);
 
         System.out.println("\n--- Binary to Decimal");
-        int decimal = LambtonStringTools.binaryToDecimal("101010");
+        int decimal = LambtonStringTools.binaryToDecimal(101010);
         System.out.println("Input  : 101010");
         System.out.println("Output : " + decimal);
         //Checking Other Result
-        int decimalCheck = LambtonStringTools.binaryToDecimal("1001");
+        int decimalCheck = LambtonStringTools.binaryToDecimal(1001);
         System.out.println("Input  : 10001");
         System.out.println("Output : " + decimalCheck);
 

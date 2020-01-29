@@ -83,12 +83,22 @@ public class LambtonStringTools
     }
 
     //4 - CONVERT BINARY NUMBER TO DECIMALS
-    public static int binaryToDecimal(String s) 
+    public static int binaryToDecimal(int s)
     {
         int decimal = 0;
-        if(s!=null) {
+        int p = 0;
+        if(s!=0) {
             try {
-                decimal = Integer.parseInt(s, 2);
+                while(true){
+                    if(s  == 0){
+                        break;
+                    } else {
+                        int temp = s%10;
+                        decimal += temp*Math.pow(2, p);
+                        s = s/10;
+                        p++;
+                    }
+                }
             } catch (Exception e) {
                 decimal = -1;
             }
