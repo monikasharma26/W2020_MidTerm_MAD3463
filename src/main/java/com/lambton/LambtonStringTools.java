@@ -35,23 +35,23 @@ public class LambtonStringTools
     //2 - FORMAT INITIALS OF STRING
     public static String initials(String s)
     {
-        String cap = "";
+        String initCount = "";
         if(!s.isEmpty() && s!=null) {
             String[] words = s.split("\\s+"); // SPace
             int i = 0;
             if (words.length == 3) {
-                cap = words[0].substring(0, 1).toUpperCase() + ". "
+                initCount = words[0].substring(0, 1).toUpperCase() + ". "
                         + words[1].substring(0, 1).toUpperCase() + ". "
                         + words[2].substring(0, 1).toUpperCase() + words[2].substring(1).toLowerCase();
             } else {
-                cap = null;
+                initCount = null;
             }
         }
         else
         {
-            cap=null;
+            initCount=null;
         }
-        return cap;
+        return initCount;
 
     }
         
@@ -60,16 +60,16 @@ public class LambtonStringTools
     {
         String mostFrequentResult="";
         if(s!=null && !s.isEmpty()) {
-            int charactercount = 256;
-            int[] count = new int[charactercount];
+            int totalCharacter = 256;
+            int[] countCharacter = new int[totalCharacter];
             int i;
             for (i = 0; i < s.length(); i++)
-                (count[s.charAt(i)])++;
+                (countCharacter[s.charAt(i)])++;
             int mostFrequent = 0;
-            for (i = 0; i < charactercount; i++) {
-                if (count[i] > count[mostFrequent]) {
+            for (i = 0; i < totalCharacter; i++) {
+                if (countCharacter[i] > countCharacter[mostFrequent]) {
                     mostFrequent = i;
-                } else if (count[i] == count[mostFrequent]) {
+                } else if (countCharacter[i] == countCharacter[mostFrequent]) {
                     mostFrequent = i;
                 }
             }
@@ -109,8 +109,12 @@ public class LambtonStringTools
             if (originalString.contains(findString)) {
                 originalString = originalString.replace(findString, newString);
             } else {
-                originalString = "String doesn't contain matched pattern";
+                originalString = "Does not Contain Passed Word";
             }
+        }
+        else
+        {
+            originalString=null;
         }
         return  originalString;
     }
