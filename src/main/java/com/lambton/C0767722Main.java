@@ -35,8 +35,8 @@ public class C0767722Main {
 
         //added New TestData
         System.out.println("\n--- Init");
-        String init = LambtonStringTools.initials("pritesh kumar pAtEl");
-        System.out.println("Input  : pritesh kumar pAtEl");
+        String init = LambtonStringTools.initials("Monika Sharma");
+        System.out.println("Input  : Monika Sharma");
         System.out.println("Output : " + init);
 
         System.out.println("\n--- Binary to Decimal");
