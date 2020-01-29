@@ -23,8 +23,7 @@ public class LambtonStringTools
             }
         }
         else {
-            rev = null;
-        }
+            rev = null;       } //  handle String if NULL  
         return rev;
     }
     
