@@ -18,14 +18,17 @@ public class LambtonStringTools
     {
         String rev = "";
         if(s != null && !s.isEmpty()){
-            char ch[] = s.toCharArray();
-
-            for (int i = ch.length - 1; i >= 0; i--) {
-                rev= rev +ch[i];
+            String[] temp = s.split("\\s+");
+            for (int i = 0; i < temp.length; i++) {
+                if (i == temp.length - 1)
+                    rev = temp[i] + rev;
+                else
+                    rev = " " + temp[i] + rev;
             }
         }
         else {
-            rev = null;       } //  handle String if NULL
+            rev = null;
+        } //  handle String if NULL
         return rev;
     }
     
