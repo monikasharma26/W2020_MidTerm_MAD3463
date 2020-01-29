@@ -27,7 +27,12 @@ public class C0767722Main {
         }else {
             System.out.println("Output : " + rev);
         }
-        
+        // Check Result Reverse
+        System.out.println("\n--- Reverse Words");
+        String revResult = LambtonStringTools.reverse("Monika Sharma");
+        System.out.println("Input  : Monika Sharma");
+        System.out.println("Output : " + rev);
+
         System.out.println("\n--- Init");
         String init = LambtonStringTools.initials("pritesh kumar pAtEl");
         System.out.println("Input  : pritesh kumar pAtEl");
