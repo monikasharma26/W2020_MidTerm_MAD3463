@@ -35,9 +35,9 @@ public class C0767722Main {
 
         //added New TestData
         System.out.println("\n--- Init");
-        String init = LambtonStringTools.initials("Monika Sharma");
+        String initResult = LambtonStringTools.initials("Monika Sharma");
         System.out.println("Input  : Monika Sharma");
-        System.out.println("Output : " + init);
+        System.out.println("Output : " + initResult);
 
         System.out.println("\n--- Binary to Decimal");
         int decimal = LambtonStringTools.binaryToDecimal("101010");
@@ -49,7 +49,7 @@ public class C0767722Main {
         System.out.println("Output : " + decimalCheck);
 
         System.out.println("\n--- Most Frequent");
-        char mostFrequent = LambtonStringTools.mostFrequent("pritesh kumar pAtEl");
+        String mostFrequent = LambtonStringTools.mostFrequent("pritesh kumar pAtEl");
         System.out.println("Input  : pritesh kumar pAtEl");
         System.out.println("Output : " + mostFrequent);
         mostFrequent = LambtonStringTools.mostFrequent("aassrrttggg desf tersgdv");

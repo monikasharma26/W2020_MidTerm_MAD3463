@@ -47,9 +47,10 @@ public class LambtonStringTools
     }
         
     //3 - FIND MOST FREQUENT CHARACTER FROM STRING
-    public static char mostFrequent(String s)
+    public static String mostFrequent(String s)
     {
         int charactercount = 256;
+        String mostFrequentResult;
         int[] count = new int[charactercount];
         int i;
         for (i = 0; i < s.length(); i++)
@@ -62,7 +63,8 @@ public class LambtonStringTools
                 mostFrequent = i;
             }
         }
-        return (char) mostFrequent;
+        mostFrequentResult= Character.toString(((char) mostFrequent)); // Convert char to string
+        return mostFrequentResult ;
     }
 
     //4 - CONVERT BINARY NUMBER TO DECIMALS
