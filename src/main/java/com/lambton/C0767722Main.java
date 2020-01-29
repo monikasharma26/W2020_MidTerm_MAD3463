@@ -32,7 +32,13 @@ public class C0767722Main {
         String init = LambtonStringTools.initials("pritesh kumar pAtEl");
         System.out.println("Input  : pritesh kumar pAtEl");
         System.out.println("Output : " + init);
-        
+
+        //added New TestData
+        System.out.println("\n--- Init");
+        String init = LambtonStringTools.initials("pritesh kumar pAtEl");
+        System.out.println("Input  : pritesh kumar pAtEl");
+        System.out.println("Output : " + init);
+
         System.out.println("\n--- Binary to Decimal");
         int decimal = LambtonStringTools.binaryToDecimal("101010");
         System.out.println("Input  : 101010");
