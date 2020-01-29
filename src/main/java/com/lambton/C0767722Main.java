@@ -71,5 +71,8 @@ public class C0767722Main {
         String newString = LambtonStringTools.replaceSubString("Lambton College in Toronto", "College", "University");
         System.out.println("Input  : Lambton College in Toronto");
         System.out.println("Output : " + newString);
+
+        // Replace Subtring test
+
     }
 }
