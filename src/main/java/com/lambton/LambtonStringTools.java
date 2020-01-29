@@ -116,6 +116,7 @@ public class LambtonStringTools
             originalString = originalString.toLowerCase();
             findString = findString.toLowerCase();
             newString = newString.toLowerCase();
+
             if (originalString.contains(findString)) {
                 originalString = originalString.replace(findString, newString);
             } else {
