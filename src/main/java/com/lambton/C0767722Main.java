@@ -9,6 +9,7 @@ package com.lambton;
  *
  * @author Pritesh Patel
  */
+//Main Class Name Changed
 public class C0767722Main {
 
     public static void main(String[] args) 
@@ -20,7 +21,7 @@ public class C0767722Main {
 
         rev = LambtonStringTools.reverse(null);
         System.out.println("Input  : NULL");
-        if(rev == null)
+       if(rev == null)
         {
             System.out.println("Function returns NULL value");
         }else {

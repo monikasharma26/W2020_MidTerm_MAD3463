@@ -14,8 +14,18 @@ public class LambtonStringTools
     //1 - REVERSE STRING
     public static String reverse(String s)
     {
+        String rev = "";
+        if(s != null && !s.isEmpty()){
+            char ch[] = s.toCharArray();
 
-        return null;
+            for (int i = ch.length - 1; i >= 0; i--) {
+                rev += ch[i];
+            }
+        }
+        else {
+            rev = null;
+        }
+        return rev;
     }
     
     //2 - FORMAT INITIALS OF STRING
