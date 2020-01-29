@@ -54,17 +54,17 @@ public class LambtonStringTools
     }
      
     //5 - REPLACING SUBSTRING WITH NEW STRING IN EXISTING STRING
-    public static String replaceSubString(String originalString, String findString, String newString) 
-    {
-        originalString = originalString.toLowerCase();
-        findString = findString.toLowerCase();
-        newString = newString.toLowerCase();
-        if (originalString.contains(findString)) {
-            originalString = originalString.replace(findString,newString);
-            return originalString;
-        } else {
-            return "String doesn't contain matched pattern";
+    public static String replaceSubString(String originalString, String findString, String newString) {
+        if (originalString != null && findString != null && newString != null && !originalString.isEmpty() && !findString.isEmpty() && !newString.isEmpty()) {
+            originalString = originalString.toLowerCase();
+            findString = findString.toLowerCase();
+            newString = newString.toLowerCase();
+            if (originalString.contains(findString)) {
+                originalString = originalString.replace(findString, newString);
+            } else {
+                originalString = "String doesn't contain matched pattern";
+            }
         }
-
+        return  originalString;
     }
 }
