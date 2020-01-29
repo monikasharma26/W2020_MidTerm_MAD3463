@@ -5,6 +5,8 @@
  */
 package com.lambton;
 
+import com.sun.tools.javac.util.Convert;
+
 /**
  *
  * @author Pritesh Patel
@@ -45,11 +47,24 @@ public class LambtonStringTools
     }
         
     //3 - FIND MOST FREQUENT CHARACTER FROM STRING
-    public static String mostFrequent(String s) 
+    public static char mostFrequent(String s)
     {
-        return null;
+        int charactercount = 256;
+        int[] count = new int[charactercount];
+        int i;
+        for (i = 0; i < s.length(); i++)
+            (count[s.charAt(i)])++;
+        int mostFrequent = 0;
+        for (i = 0; i < charactercount; i++) {
+            if (count[i] > count[mostFrequent]) {
+                mostFrequent = i;
+            } else if (count[i] == count[mostFrequent]) {
+                mostFrequent = i;
+            }
+        }
+        return (char) mostFrequent;
     }
-    
+
     //4 - CONVERT BINARY NUMBER TO DECIMALS
     public static int binaryToDecimal(String s) 
     {

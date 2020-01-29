@@ -43,7 +43,7 @@ public class C0767722Main {
         System.out.println("Output : " + decimalCheck);
 
         System.out.println("\n--- Most Frequent");
-        String mostFrequent = LambtonStringTools.mostFrequent("pritesh kumar pAtEl");
+        char mostFrequent = LambtonStringTools.mostFrequent("pritesh kumar pAtEl");
         System.out.println("Input  : pritesh kumar pAtEl");
         System.out.println("Output : " + mostFrequent);
         mostFrequent = LambtonStringTools.mostFrequent("aassrrttggg desf tersgdv");
