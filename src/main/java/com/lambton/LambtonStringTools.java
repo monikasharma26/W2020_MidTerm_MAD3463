@@ -23,7 +23,7 @@ public class LambtonStringTools
             }
         }
         else {
-            rev = null;       } //  handle String if NULL  
+            rev = null;       } //  handle String if NULL
         return rev;
     }
     
@@ -43,7 +43,14 @@ public class LambtonStringTools
     //4 - CONVERT BINARY NUMBER TO DECIMALS
     public static int binaryToDecimal(String s) 
     {
-       return 0;
+        int decimal = 0;
+        try {
+            decimal = Integer.parseInt(s, 2);
+        } catch (Exception e) {
+            decimal = -1;
+        }
+        return decimal;
+
     }
      
     //5 - REPLACING SUBSTRING WITH NEW STRING IN EXISTING STRING
