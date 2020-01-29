@@ -21,7 +21,7 @@ public class LambtonStringTools
             char ch[] = s.toCharArray();
 
             for (int i = ch.length - 1; i >= 0; i--) {
-                rev += ch[i];
+                rev= rev +ch[i];
             }
         }
         else {
@@ -32,15 +32,21 @@ public class LambtonStringTools
     //2 - FORMAT INITIALS OF STRING
     public static String initials(String s)
     {
-        String[] words = s.split("\\s+"); // SPace
-        int i = 0;
         String cap = "";
-        if (words.length == 3) {
-            cap = words[0].substring(0, 1).toUpperCase() + ". "
-                    + words[1].substring(0, 1).toUpperCase() + ". "
-                    + words[2].substring(0, 1).toUpperCase() + words[2].substring(1).toLowerCase();
-        } else {
-            cap = null;
+        if(!s.isEmpty() && s!=null) {
+            String[] words = s.split("\\s+"); // SPace
+            int i = 0;
+            if (words.length == 3) {
+                cap = words[0].substring(0, 1).toUpperCase() + ". "
+                        + words[1].substring(0, 1).toUpperCase() + ". "
+                        + words[2].substring(0, 1).toUpperCase() + words[2].substring(1).toLowerCase();
+            } else {
+                cap = null;
+            }
+        }
+        else
+        {
+            cap=null;
         }
         return cap;
 
@@ -49,21 +55,27 @@ public class LambtonStringTools
     //3 - FIND MOST FREQUENT CHARACTER FROM STRING
     public static String mostFrequent(String s)
     {
-        int charactercount = 256;
-        String mostFrequentResult;
-        int[] count = new int[charactercount];
-        int i;
-        for (i = 0; i < s.length(); i++)
-            (count[s.charAt(i)])++;
-        int mostFrequent = 0;
-        for (i = 0; i < charactercount; i++) {
-            if (count[i] > count[mostFrequent]) {
-                mostFrequent = i;
-            } else if (count[i] == count[mostFrequent]) {
-                mostFrequent = i;
+        String mostFrequentResult="";
+        if(s!=null && !s.isEmpty()) {
+            int charactercount = 256;
+            int[] count = new int[charactercount];
+            int i;
+            for (i = 0; i < s.length(); i++)
+                (count[s.charAt(i)])++;
+            int mostFrequent = 0;
+            for (i = 0; i < charactercount; i++) {
+                if (count[i] > count[mostFrequent]) {
+                    mostFrequent = i;
+                } else if (count[i] == count[mostFrequent]) {
+                    mostFrequent = i;
+                }
             }
+            mostFrequentResult = Character.toString(((char) mostFrequent)); // Convert char to string
         }
-        mostFrequentResult= Character.toString(((char) mostFrequent)); // Convert char to string
+        else
+        {
+            mostFrequentResult=null;
+        }
         return mostFrequentResult ;
     }
 
@@ -71,10 +83,16 @@ public class LambtonStringTools
     public static int binaryToDecimal(String s) 
     {
         int decimal = 0;
-        try {
-            decimal = Integer.parseInt(s, 2);
-        } catch (Exception e) {
-            decimal = -1;
+        if(s!=null) {
+            try {
+                decimal = Integer.parseInt(s, 2);
+            } catch (Exception e) {
+                decimal = -1;
+            }
+        }
+        else
+        {
+            decimal=0;
         }
         return decimal;
 
