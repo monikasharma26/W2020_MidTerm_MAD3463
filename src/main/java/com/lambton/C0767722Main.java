@@ -73,6 +73,10 @@ public class C0767722Main {
         System.out.println("Output : " + newString);
 
         // Replace Subtring test
+        System.out.println("\n--- Replace SubString");
+        String newStringTest = LambtonStringTools.replaceSubString("“the dog jumped over the fence", "the", "that");
+        System.out.println("Input  : “the dog jumped over the fence");
+        System.out.println("Output : " + newStringTest);
 
     }
 }
