@@ -28,9 +28,9 @@ public class LambtonStringTools
     }
     
     //2 - FORMAT INITIALS OF STRING
-    public static String initials(String s) 
+    public static String initials(String s)
     {
-        String[] words = s.split("\\s+");
+        String[] words = s.split("\\s+"); // SPace
         int i = 0;
         String cap = "";
         if (words.length == 3) {
