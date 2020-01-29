@@ -95,7 +95,6 @@ public class LambtonStringTools
             decimal=0;
         }
         return decimal;
-
     }
      
     //5 - REPLACING SUBSTRING WITH NEW STRING IN EXISTING STRING
